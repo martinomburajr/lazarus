@@ -28,7 +28,7 @@ Download the .zip file or clone the repository. If you have Go installed on your
   
 #### 2.2 Example of code
 
-  laz deploy -n=vm-raiser -p=my-gcp-proj -s=mylazarussa@my-gcp-proj.iam.gserviceaccount.com -cron="\*/10 * * * \*" -vms="[{vm: myv1, zone: europe-west1-d}, {vm: myv2, zone: us-central-1a>] -r=us-central1
+    laz deploy -n=vm-raiser -p=my-gcp-proj -s=mylazarussa@my-gcp-proj.iam.gserviceaccount.com -cron="\*/10 * * * \*" -vms="[{vm: myv1, zone: europe-west1-d}, {vm: myv2, zone: us-central-1a>]" -r=us-central1
   
   ##### Description
   This uses the lazarus application you installed to deploy a lazarus component named **`vm-raiser`** under the GCP project **`my-gcp-proj`** using the **`mylazarussa@my-gcp-proj.iam.gserviceaccount.com`** service account you created in **`my-gcp-proj`**. The scheduler uses the **`"\*/10 * * * \*"`** i.e polls the VMs status every 10 minutes. The Cloud Function watches **`myvm1`** in **`europe-west1-d`** and **`myvm2`** in **`us-central1-a`**. The Cloud Scheduler and Cloud Functions would be deployed to the **`us-central1`** region.
